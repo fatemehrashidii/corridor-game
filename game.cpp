@@ -13,4 +13,5 @@ int main() {
 
     // set the board
     corridor.set_board(number_of_players);
+    
 }
