@@ -51,12 +51,12 @@ int main() {
         // if a player wants to put walls:
         if (choice == 'W')
         {
-            int fist_wall, second_wall;
-            cin >> fist_wall >> second_wall;
+            int first_wall, second_wall;
+            cin >> first_wall >> second_wall;
             // check if the blockes are empty to block 
-            if (corridor.valid_wall(fist_wall, second_wall))
+            if (corridor.valid_wall(first_wall, second_wall))
             {
-                corridor.board[fist_wall] = corridor.board[second_wall] = "~~~~~~";
+                corridor.board[first_wall] = corridor.board[second_wall] = "~~~~~~";
                 system("cls");
                 corridor.print_board();
             } // end if
