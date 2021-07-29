@@ -1,5 +1,5 @@
 #include <iostream>
-#include <headers.h>
+#include "headers.h"
 
 CORRIDOR :: CORRIDOR(int n) {
     number_of_players = n;
