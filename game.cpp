@@ -72,4 +72,4 @@ int main() {
     {
         cout << corridor.board[60].substr(2, 1) << " won the game!" << endl;
     }
-}
+} // end main
