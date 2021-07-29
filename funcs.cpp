@@ -53,5 +53,56 @@ void CORRIDOR :: print_board() {
         std :: cout << std :: endl;
     }
 }
-
-
+// function to check if a move is valid or not
+bool CORRIDOR :: valid_place(int i, int j)
+{
+    // board[i] : start | board[j] : destination
+    // if board[i] == "     " ---> there is nothing to move!
+    // if board[j] != "     " ---> the place is blocked.
+    if (board[i] == "     " || board[j] != "     ")
+        return false;
+    // moving forward
+    if (j == i + 1)
+    {
+        // check if it goes to the next line or not
+        if (j % 11 == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    // moving backward
+    else if (j == i -1)
+    {
+        // check if it goes to the privios line or not
+        if (i % 11 == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    // moving up/down
+    else if ((j == i+11) || (j == i-11))
+        return true;
+    // anywhere else
+    else 
+        return false;
+}
+// function to check if it's valid to put the wall or not
+bool CORRIDOR :: valid_wall(int i, int j)
+{
+    // rules: target blocks and the center block couldn't be full
+    if (board[i] != "     " || board[j] != "     " || i == 60 || j == 60)
+        return false;
+    // if chosen blockes are next to each other, we can put walls
+    if (j == i+1 || j == i-1 || j == i+11 || j == i-11)
+        return true;
+    else 
+        return false;
+}

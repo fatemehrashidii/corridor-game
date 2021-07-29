@@ -10,7 +10,7 @@ int main() {
     int number_of_players;
     cin >> number_of_players;
     CORRIDOR corridor(number_of_players);
+
     // set the board
     corridor.set_board(number_of_players);
-    
 }
