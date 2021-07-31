@@ -1,5 +1,3 @@
-// corridor game -- Driver code
-
 #include <iostream>
 #include "headers.h"
 
